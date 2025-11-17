@@ -15,6 +15,7 @@ import Error from '../Error/Error.jsx';
 import { useContext } from 'react';
 import { AuthStore } from '../../Context/AuthStore.js';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute.jsx';
+import Logout from '../Logout/Logout.jsx';
 import { Online, Offline } from 'react-detect-offline';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         { path: 'about', element: <About /> },
         { path: 'register', element: <Register /> },
         { path: 'login', element: <Login saveuserdata={saveuserdata} /> },
+        { path: 'logout', element: <Logout /> },
       ],
     },
   ]);
