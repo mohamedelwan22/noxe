@@ -28,7 +28,7 @@ export default function Register() {
       'last-name': Joi.string().alphanum().min(2).max(20).required(),
       'age': Joi.number().min(10).max(100).required(),
       'email': Joi.string().email({ tlds: { allow: ['com', 'net'] } }).required(),
-      'password': Joi.string().min(4).max(20).pattern(/^[a-z][0-9]{3}$/).required(),
+      'password': Joi.string().min(4).max(20).required(),
     });
 
     // 👇 بيرجع نتيجة التحقق

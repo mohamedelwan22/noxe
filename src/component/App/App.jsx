@@ -42,8 +42,8 @@ function App() {
 
   return (
     <div>
-      <Online>
-        <RouterProvider router={routes} />
+      <RouterProvider router={routes} />
+      {/* <Online>
       </Online>
       <Offline>
         <div className="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75" style={{ zIndex: 9999 }}>
@@ -59,7 +59,7 @@ function App() {
             <p className="mt-3 text-light">Waiting for connection...</p>
           </div>
         </div>
-      </Offline>
+      </Offline> */}
     </div>
   );
 }
