@@ -14,9 +14,9 @@ export default function Logout() {
     // إعادة تعيين الـ userData في Context
     saveuserdata(null);
 
-    // إعادة التوجيه لصفحة login
-    navigate('/login');
+    // إعادة التوجيه لصفحة login مباشرة، بدون الرجوع للصفحة السابقة
+    navigate('/login', { replace: true });
   }, []);
 
-  return null;
+  return null; // مش محتاجين نعرض حاجة
 }

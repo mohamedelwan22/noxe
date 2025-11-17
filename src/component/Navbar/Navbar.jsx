@@ -47,13 +47,12 @@ export default function Navbar({ userData, logout }) {
                   Hello: {userData['first-name'] || userData['first_name']}
                 </Link>
                 <button
-                  className="nav-link btn btn-info text-white"
+                  className="nav-link btn btn-info text-white ms-2"
                   style={{ color: 'white', backgroundColor: '#0dcaf0', borderColor: '#0dcaf0' }}
                   onClick={logout}
                 >
                   Log Out
                 </button>
-
               </li>
             ) : (
               <>
