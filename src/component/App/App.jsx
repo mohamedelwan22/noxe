@@ -15,13 +15,12 @@ import Error from '../Error/Error.jsx';
 import { useContext } from 'react';
 import { AuthStore } from '../../Context/AuthStore.js';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute.jsx';
-import Logout from '../Logout/Logout.jsx';
 import { Online, Offline } from 'react-detect-offline';
 
 function App() {
   const { userData, saveuserdata } = useContext(AuthStore);
 
-  let routes = createHashRouter([
+  const routes = createHashRouter([
     {
       path: '/',
       element: <Masterlayout userData={userData} />,
@@ -37,7 +36,6 @@ function App() {
         { path: 'about', element: <About /> },
         { path: 'register', element: <Register /> },
         { path: 'login', element: <Login saveuserdata={saveuserdata} /> },
-        { path: 'logout', element: <Logout /> },
       ],
     },
   ]);
@@ -45,23 +43,6 @@ function App() {
   return (
     <div>
       <RouterProvider router={routes} />
-      {/* <Online>
-      </Online>
-      <Offline>
-        <div className="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75" style={{ zIndex: 9999 }}>
-          <div className="text-center text-white p-5 bg-danger rounded">
-            <i className="fas fa-wifi-slash fa-5x mb-4"></i>
-            <h1 className="display-4 fw-bold">No Internet Connection</h1>
-            <p className="lead mt-3">
-              Please check your internet connection and try again
-            </p>
-            <div className="spinner-border text-light mt-3" role="status">
-              <span className="visually-hidden">Waiting for connection...</span>
-            </div>
-            <p className="mt-3 text-light">Waiting for connection...</p>
-          </div>
-        </div>
-      </Offline> */}
     </div>
   );
 }
